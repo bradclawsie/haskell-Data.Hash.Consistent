@@ -18,22 +18,22 @@ Here is a small program illustrating its use:
 @
 
   module Main where
-  import Data.Hash.Consistent as CH
+  import qualified Data.Hash.Consistent as CH
 
   main = do
     let hosts  = ["hi.example.net","bar.example.net","foo.example.net"] :: [CH.Host]
     let n = 2 :: Int
-    let ch = new
+    let ch = CH.new
     print $ show $ ch
-    ch <- return $ add hosts n ch
+    ch <- return $ CH.add hosts n ch
     print $ show $ ch  
-    let fh = [head hosts] :: [Host]
-    let hh_fh = hash_hosts fh n
+    let fh = [head hosts] :: [CH.Host]
+    let hh_fh = CH.hash_hosts fh n
     print hh_fh
-    ch <- return $ del fh n ch
+    ch <- return $ CH.del fh n ch
     print $ show $ ch  
     let i = 770931073
-    let tgt = target_host i ch 
+    let tgt = CH.target_host i ch 
     print tgt
     return ()
 @
