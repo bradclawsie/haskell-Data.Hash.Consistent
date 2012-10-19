@@ -45,7 +45,7 @@ https://www.b7j0c.org/stuff/license.txt
 
 -}
 
-module Data.Hash.Consistent (textCrc32,search,add,del,targetHost,hashHosts,
+module Data.Hash.Consistent (textCrc32,search,add,del,new,targetHost,hashHosts,
                              Host,Hash,HashHost,ConsistentHash) where
 
 import qualified Control.Monad.ST              as ST
