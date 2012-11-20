@@ -1,5 +1,5 @@
 Name:                Data-Hash-Consistent
-Version:             0.1.0
+Version:             0.1.1
 Description:         Provide a simple consistent hashing mechanism
 Synopsis:	     Provide a simple consistent hashing mechanism
 Category:            Data
@@ -15,5 +15,5 @@ extra-source-files:  example.hs,README.md
 Flag splitBase
   Description: Choose the new smaller, split-up base package.
 Library 
-  Build-Depends: bytestring,vector,vector-algorithms,digest,base>=3 && < 6
+  Build-Depends: bytestring,vector,vector-algorithms,digest,utf8-string,base>=3 && < 6
   Exposed-modules:     Data.Hash.Consistent
